@@ -299,7 +299,7 @@ if (opcion == '1' || methodCodeQR) {
    if (connection == 'open') {
 console.log(chalk.yellowBright('\n╭──────────────────────◊\n╎✅ CONECTADO A WHATSAPP ✅\n╰──────────────────────◊\n'))
 //conn.fakeReply('5493873687620@s.whatsapp.net', '✅', '0@s.whatsapp.net', 'Hola, soy un bot nuevo.', '0@s.whatsapp.net')
- await conn.groupAcceptInvite('FqVzq74EwoL3tAA2DSGcXL');
+ //await conn.groupAcceptInvite('FqVzq74EwoL3tAA2DSGcXL');
    }
    /*◊════════════• ❮ MENSAJES DE REEMPLAZO ❯ •═════════════◊*/
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
