@@ -70,6 +70,7 @@ global.fb = 'https://www.facebook.com/share/8XyV52kz3sfhrzft/?mibextid=qi2Omg'
 // ❒═════════════════◊【 𝐕𝐈𝐃𝐄𝐎𝐒 】◊═════════════════❒
 // ❒═════════════════◊【 𝐌𝐄𝐍𝐒𝐀𝐉𝐄𝐒 𝐀𝐋𝐄𝐀𝐓𝐎𝐑𝐈𝐎𝐒 】◊═════════════════❒
 //MENSAJES RANDOM:
+global.naufraMenus = [imagen1, imagen2, imagen3, imagen4, imagen5, imagen6, imagen7, imagen8]
 global.naufraRedes = [gp1, gp2, gp3, gp4, channel, paypal, yt, md, fb]
 // ❒═════════════════◊【 𝐇𝐎𝐑𝐀𝐑𝐈𝐎𝐒 】◊═════════════════❒
 //Saludo User, Buen Dia
