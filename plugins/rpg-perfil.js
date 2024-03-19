@@ -37,11 +37,7 @@ const handler = async (m, {conn, usedPrefix, participants, isPrems}) => {
 
 > ⓘ 𝘾𝙊𝘿𝙄𝙂𝙊 𝘿𝙀 𝙎𝙀𝙍𝙄𝙀: 
 > ✦ ${sn}`;
-    else {
-      // await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
-      const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
-      conn.sendMessage(m.chat, {text: str.trim(), mentions: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: {forwardingScore: 9999999, isForwarded: true, mentionedJid: [...str.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": global.wm, "containsAutoReply": true, "mediaType": 1, "thumbnail": pp, "mediaUrl": `https://github.com/Bots-WhatsApp-OFC/NaufraZapp-MD`, "sourceUrl": `https://github.com/Bots-WhatsApp-OFC/NaufraZapp-MD`}}}, {quoted: fkontak2});
-    }
+    conn.sendMessage(m.chat, {image: {url: pp}, caption: str}, {quoted: m});
    }
   };
 handler.help = ['profile [@user]'];
