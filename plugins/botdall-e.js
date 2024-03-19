@@ -1,4 +1,4 @@
-import { youtubedl, youtubeSearch, youtubedlv2, tiktokdl } from '@bochilteam/scraper' 
+//import { youtubedl, youtubeSearch, youtubedlv2, tiktokdl } from '@bochilteam/scraper' 
 import uploader from '../lib/uploadImage.js'
 const regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i;
 import { facebook } from "@xct007/frieren-scraper"
