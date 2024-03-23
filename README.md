@@ -105,7 +105,7 @@ npm start
 
 <h2 align="center">🌎 𝐂𝐎𝐋𝐀𝐁𝐎𝐑𝐀𝐃𝐎𝐑𝐄𝐒 🌎</h2>
 
-<img src="https://contrib.rocks/image?repo=Bots-WhatsApp-OFC/ON-ChatGPT" /> 
+<img src="https://contrib.rocks/image?repo=Bots-WhatsApp-OFC/NaufraZapp-MD" /> 
 </a>
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=00FF00&height=120&section=footer"/>
