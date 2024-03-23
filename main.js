@@ -121,7 +121,7 @@ const MethodMobile = process.argv.includes("mobile")
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
 const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
 
-// CODIGO MEJORADO POR GUARDIAN BOT MD.
+//Codigo Adaptado Para Ser Bot mediante 8 digitos por: @gata_dios
 let opcion
 if (methodCodeQR) {
 opcion = '1'
@@ -196,8 +196,8 @@ rl.close()
         setTimeout(async () => {
             let codigo = await conn.requestPairingCode(numeroTelefono)
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
-            console.log(chalk.cyan('ⓘ introduce el código de emparejamiento en WhatsApp.'));
-            console.log(chalk.black(chalk.bgGreen(`Su código de emparejamiento: `)), chalk.black(chalk.white(codigo)))
+            //console.log(chalk.cyan('ⓘ introduce el código de emparejamiento en WhatsApp.'));
+            console.log(chalk.black(chalk.bgGreen(`🟢CÓDIGO DE VINCULACIÓN🟢`)), chalk.black(chalk.white(codigo)))
         }, 3000)
 }}
 }
