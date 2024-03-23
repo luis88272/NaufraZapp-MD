@@ -958,6 +958,7 @@ export async function handler(chatUpdate) {
         if (!('antiArab2' in chat)) chat.antiArab2 = false;
         if (!('antiporno' in chat)) chat.antiporno = false;
         if (!('game' in chat)) chat.game = true;
+        if (!('reaction' in chat)) chat.reaction = true;    
         if (!('modoadmin' in chat)) chat.modoadmin = false;
         if (!('simi' in chat)) chat.simi = false;
         if (!isNumber(chat.expired)) chat.expired = 0;
@@ -986,6 +987,7 @@ export async function handler(chatUpdate) {
           modoadmin: false,
           simi: false,
           game: true,
+          reaction: true,
           expired: 0,
         };
       }
@@ -1000,8 +1002,8 @@ export async function handler(chatUpdate) {
         if (!('antiCall' in settings)) settings.antiCall = true;
         if (!('antiPrivate' in settings)) settings.antiPrivate = false;
         if (!('modejadibot' in settings)) settings.modejadibot = false;
-        if (!('antispam' in settings)) settings.antispam = false;
-        if (!('reaction' in settings)) settings.reaction = true;
+        if (!('antispam' in settings)) settings.antispam = false; 
+        //if (!('reaction' in settings)) settings.reaction = true; 
         if (!('audios_bot' in settings)) settings.audios_bot = true;  
         if (!('modoia' in settings)) settings.modoia = false;      
       } else {
@@ -1014,7 +1016,7 @@ export async function handler(chatUpdate) {
           antiPrivate: false,
           modejadibot: true,
           antispam: false,
-          reaction: true,
+          //reaction: true,
           audios_bot: true,
           modoia: false
         };
