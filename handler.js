@@ -946,7 +946,6 @@ export async function handler(chatUpdate) {
         if (!('sPromote' in chat)) chat.sPromote = '';
         if (!('sDemote' in chat)) chat.sDemote = '';
         if (!('delete' in chat)) chat.antidelete = false;
-        if (!('reaction' in chat)) chat.reaction = true;
         if (!('modohorny' in chat)) chat.modohorny = false;
         if (!('autosticker' in chat)) chat.autosticker = false;
         if (!('audios' in chat)) chat.audios = true;
@@ -972,8 +971,7 @@ export async function handler(chatUpdate) {
           sBye: '',
           sPromote: '',
           sDemote: '',
-          antidelete: false,
-          reaction: true,
+          antidelete: false, 
           modohorny: false,
           autosticker: false,
           audios: true,
@@ -1003,6 +1001,7 @@ export async function handler(chatUpdate) {
         if (!('antiPrivate' in settings)) settings.antiPrivate = false;
         if (!('modejadibot' in settings)) settings.modejadibot = false;
         if (!('antispam' in settings)) settings.antispam = false;
+        if (!('reaction' in settings)) settings.reaction = true;
         if (!('audios_bot' in settings)) settings.audios_bot = true;  
         if (!('modoia' in settings)) settings.modoia = false;      
       } else {
@@ -1015,6 +1014,7 @@ export async function handler(chatUpdate) {
           antiPrivate: false,
           modejadibot: true,
           antispam: false,
+          reaction: true,
           audios_bot: true,
           modoia: false
         };
