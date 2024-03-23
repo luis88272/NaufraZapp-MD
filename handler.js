@@ -940,15 +940,16 @@ export async function handler(chatUpdate) {
         if (!('isBanned' in chat)) chat.isBanned = false;
         if (!('welcome' in chat)) chat.welcome = false;
         if (!('detect' in chat)) chat.detect = false;
-        if (!('detect2' in chat)) chat.detect2 = false;
+        if (!('detect2' in chat)) chat.detect2 = true;
         if (!('sWelcome' in chat)) chat.sWelcome = '';
         if (!('sBye' in chat)) chat.sBye = '';
         if (!('sPromote' in chat)) chat.sPromote = '';
         if (!('sDemote' in chat)) chat.sDemote = '';
         if (!('delete' in chat)) chat.antidelete = false;
+        if (!('reaction' in chat)) chat.reaction = true;
         if (!('modohorny' in chat)) chat.modohorny = false;
         if (!('autosticker' in chat)) chat.autosticker = false;
-        if (!('audios' in chat)) chat.audios = false;
+        if (!('audios' in chat)) chat.audios = true;
         if (!('antiLink' in chat)) chat.antiLink = true;
         if (!('antiLink2' in chat)) chat.antiLink2 = false;
         if (!('antiviewonce' in chat)) chat.antiviewonce = false;
@@ -966,15 +967,16 @@ export async function handler(chatUpdate) {
           isBanned: false,
           welcome: false,
           detect: false,
-          detect2: false,
+          detect2: true,
           sWelcome: '',
           sBye: '',
           sPromote: '',
           sDemote: '',
           antidelete: false,
+          reaction: true,
           modohorny: false,
           autosticker: false,
-          audios: false,
+          audios: true,
           antiLink: true,
           antiLink2: false,
           antiviewonce: false,
@@ -994,26 +996,26 @@ export async function handler(chatUpdate) {
       if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {};
       if (settings) {
         if (!('self' in settings)) settings.self = false;
-        if (!('autoread' in settings)) settings.autoread = true;
-        if (!('autoread2' in settings)) settings.autoread2 = true;
-        if (!('restrict' in settings)) settings.restrict = true;
+        if (!('autoread' in settings)) settings.autoread = false;
+        if (!('autoread2' in settings)) settings.autoread2 = false;
+        if (!('restrict' in settings)) settings.restrict = false;
         if (!('antiCall' in settings)) settings.antiCall = true;
         if (!('antiPrivate' in settings)) settings.antiPrivate = false;
         if (!('modejadibot' in settings)) settings.modejadibot = false;
-        if (!('antispam' in settings)) settings.antispam = true;
-        if (!('audios_bot' in settings)) settings.audios_bot = false;  
+        if (!('antispam' in settings)) settings.antispam = false;
+        if (!('audios_bot' in settings)) settings.audios_bot = true;  
         if (!('modoia' in settings)) settings.modoia = false;      
       } else {
         global.db.data.settings[this.user.jid] = {
           self: false,
-          autoread: true,
-          autoread2: true,
-          restrict: true,
+          autoread: false,
+          autoread2: false,
+          restrict: false,
           antiCall: true,
           antiPrivate: false,
           modejadibot: true,
-          antispam: true,
-          audios_bot: false,
+          antispam: false,
+          audios_bot: true,
           modoia: false
         };
       }
@@ -1423,8 +1425,14 @@ remoteJid: m.chat, fromMe: false, id: bang, participant: cancellazzione
     const settingsREAD = global.db.data.settings[mconn.conn.user.jid] || {};
     if (opts['autoread']) await mconn.conn.readMessages([m.key]);
     if (settingsREAD.autoread2) await mconn.conn.readMessages([m.key]);
-  }
+  //if (settingsREAD.autoread2 == 'true') await this.readMessages([m.key]);
+
+ if (db.data.chats[m.chat].reaction && m.text.match(/(ción|dad|aje|oso|izar|mente|pero|tion|age|ous|ate|and|but|ify|bot|bug|syntax)/gi)) {
+let emot = pickRandom(["😀", "😃", "😄", "😁", "😆", "🥹", "😅", "😂", "🤣", "🥲", "☺️", "😊", "😇", "🙂", "🙃", "😉", "😌", "😍", "🥰", "😘", "😗", "😙", "😚", "😋", "😛", "😝", "😜", "🤪", "🤨", "🧐", "🤓", "😎", "🥸", "🤩", "🥳", "😏", "😒", "😞", "😔", "😟", "😕", "🙁", "☹️", "😣", "😖", "😫", "😩", "🥺", "😢", "😭", "😤", "😠", "😡", "🤬", "🤯", "😳", "🥵", "🥶", "😶‍🌫️", "😱", "😨", "😰", "😥", "😓", "🤗", "🤔", "🫣", "🤭", "🫢", "🫡", "🤫", "🫠", "🤥", "😶", "🫥", "😐", "🫤", "😑", "🫨", "😬", "🙄", "😯", "😦", "😧", "😮", "😲", "🥱", "😴", "🤤", "😪", "😮‍💨", "😵", "😵‍💫", "🤐", "🥴", "🤢", "🤮", "🤧", "😷", "🤒", "🤕", "🤑", "🤠", "😈", "👿", "👺", "🤡", "💩", "👻", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🫶", "👍", "✌️", "🙏", "🫵", "🤏", "🤌", "☝️", "🖕", "🙏", "🫵", "🫂", "🐱", "🤹‍♀️", "🤹‍♂️", "🗿", "✨", "⚡", "🔥", "🌈", "🩷", "❤️", "🧡", "💛", "💚", "🩵", "💙", "💜", "🖤", "🩶", "🤍", "🤎", "💔", "❤️‍🔥", "❤️‍🩹", "❣️", "💕", "💞", "💓", "💗", "💖", "💘", "💝", "🏳️‍🌈", "👊", "👀", "💋", "🫰", "💅", "👑", "🐣", "🐤", "🐈"])
+if (!m.fromMe) return this.sendMessage(m.chat, { react: { text: emot, key: m.key }})
 }
+function pickRandom(list) { return list[Math.floor(Math.random() * list.length)]}
+}}
 
 /**
  * Handle groups participants update
