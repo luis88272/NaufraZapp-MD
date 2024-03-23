@@ -121,15 +121,28 @@ const MethodMobile = process.argv.includes("mobile")
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
 const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
 
-//Codigo Adaptado Para Ser Bot mediante 8 digitos por: @gata_dios
+//Código adaptado para la compatibilidad de ser bot con el código de 8 digitos. Hecho por: https://github.com/GataNina-Li
 let opcion
 if (methodCodeQR) {
 opcion = '1'
 }
 if (!methodCodeQR && !methodCode && !fs.existsSync(`./${authFile}/creds.json`)) {
 do {
-let lineM = '────────────────────────✦'
-opcion = await question('╭────────────────────────✦\n┋Seleccione las opciones que desea\n╰────────────────────────✦\n╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈◈\n│OPCION: 1\n│Escanea con un QR\n╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈◈\n╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈◈\n│OPCION: 2\n│Código de texto de 8 dígitos\n╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈◈\n---> ')
+let lineM = '━━━━━━━✦✗✦━━━━━━━━'
+opcion = await question(`╭${lineM}╮  
+┃ ${chalk.greenBright('╭─━━━━━━⊱✿⊰━━━━━━─')}
+┃ ${chalk.greenBright('┇')} ${chalk.blue.bgBlue.bold.cyan('MÉTODO DE VINCULACIÓN')}
+┃ ${chalk.greenBright('╰─━━━━━━⊱✿⊰━━━━━━─')}   
+┃ ${chalk.greenBright('╭─━━━━━━⊱✿⊰━━━━━━─')}     
+┃ ${chalk.greenBright('┇')} ${chalk.yellow.bgMagenta.bold.yellow('¿CÓMO DESEA CONECTARSE?')}
+┃ ${chalk.greenBright('┇')} ${chalk.bold.redBright('»  Opción 1:')} ${chalk.yellowBright('Código QR.')}
+┃ ${chalk.greenBright('┇')} ${chalk.bold.redBright('»  Opción 2:')} ${chalk.yellowBright('Código de 8 digitos.')}
+┃ ${chalk.greenBright('╰─━━━━━━⊱✿⊰━━━━━━─')}
+┃ ${chalk.greenBright('╭─━━━━━━⊱✿⊰━━━━━━─ ')}     
+┃ ${chalk.greenBright('┇')} ${chalk.italic.magenta('Escriba sólo el número de')}
+┃ ${chalk.greenBright('┇')} ${chalk.italic.magenta('la opción para conectarse.')}
+┃ ${chalk.greenBright('╰─━━━━━━⊱✿⊰━━━━━━─ ')} 
+╰${lineM}╯\n${chalk.bold.magentaBright('---> ')}`)
 //if (fs.existsSync(`./${authFile}/creds.json`)) {
 //console.log(chalk.bold.redBright(`PRIMERO BORRE EL ARCHIVO ${chalk.bold.greenBright("creds.json")} QUE SE ENCUENTRA EN LA CARPETA ${chalk.bold.greenBright(authFile)} Y REINICIE.`))
 //process.exit()
