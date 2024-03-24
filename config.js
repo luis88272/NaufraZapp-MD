@@ -24,7 +24,6 @@ global.owner = [
  ['5493873605231'],
  ['5491133978269']]
 
-global.fake = { contextInfo: { mentionedJid: conn.parseMention(wm), forwardingScore: 1, isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: 'channel/0029Va6yY0iLY6d6XDmqA03g/208@newsletter', serverMessageId: '', newsletterName: 'NaufraZapp 🌩' }, externalAdReply: { title: wm, body: vs, mediaType: 1, renderLargerThumbnail: false, previewType: `PHOTO`, thumbnailUrl: imagen2, thumbnail: imagen1, sourceUrl: gp2 }}}, { quoted: m } //fake con reenviado de canal
  
 // ❒═════════════════◊【 𝐂𝐎𝐍𝐓𝐀𝐂𝐓𝐎𝐒 】◊═════════════════❒
 //Agregate si tu numero es owner
