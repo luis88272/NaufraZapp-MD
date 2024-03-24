@@ -18,7 +18,7 @@ const rl = createInterface(process.stdin, process.stdout)
 say('NaufraZapp\nBot-MD', {
 font: 'block',
 align: 'center',
-colors: ['magenta', 'green']
+colors: ['green', 'green']
 })
 say(`Bot NaufraZapp Activate 24/7.`, {
 font: 'console',
@@ -37,7 +37,7 @@ let args = [join(__dirname, file), ...process.argv.slice(2)]
 say([process.argv[0], ...args].join(' '), {
 font: 'console',
 align: 'center',
-gradient: ['blue', 'magenta']
+gradient: ['blue','magenta']
 })
 setupMaster({
 exec: args[0],
