@@ -1,4 +1,4 @@
-var handler = async (m) => {
+/*var handler = async (m) => {
 
 let fra = `https://youtu.be/LW2Z8vVsGUg?si=0_cxVxCujjKCOfSd`
 
@@ -25,4 +25,4 @@ handler.command = /^(installnaufra|instalarnaufra)$/i
 
 handler.register = true
 
-export default handler
+export default handler*/
