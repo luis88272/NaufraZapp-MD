@@ -1,15 +1,15 @@
 var handler = async (m) => {
 
-let tqto = `https://youtu.be/LW2Z8vVsGUg?si=0_cxVxCujjKCOfSd`
+let fra = `https://youtu.be/LW2Z8vVsGUg?si=0_cxVxCujjKCOfSd`
 
-conn.reply(m.chat, tqto, m, fake, )
+conn.reply(m.chat, fra, m, fake, )
 
 handler.before = async m => {
 
 if (/^installsakura|instalarsakura$/i.test(m.text) ) {
 let texto = `https://youtu.be/9-v4XwMTJYE?si=pUye1HemBkB809-A`
 
-conn.reply(m.chat, texto,)
+conn.reply(m.chat, texto, m, fake, )
 }
 
 if (/^instalargata$/i.test(m.text) ) {
