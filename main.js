@@ -152,7 +152,7 @@ console.log('⚠️ ERROR, SOLO SELECCIONA LA OPCION 1 O 2...\n')
 }
 
 console.info = () => {} //dejará de aparecer la molesta pre-key
-console.warn = () => {}
+//console.warn = () => {}
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
