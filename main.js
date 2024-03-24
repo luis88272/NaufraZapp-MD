@@ -151,7 +151,7 @@ console.log('⚠️ ERROR, SOLO SELECCIONA LA OPCION 1 O 2...\n')
 }} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
 }
 
-console.info = () => {}
+console.info = () => {} //dejará de aparecer la molesta pre-key
 console.warn = () => {}
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
@@ -210,7 +210,7 @@ rl.close()
             let codigo = await conn.requestPairingCode(numeroTelefono)
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
             //console.log(chalk.cyan('ⓘ introduce el código de emparejamiento en WhatsApp.'));
-            console.log(chalk.black(chalk.bgGreen(`🟢CÓDIGO DE VINCULACIÓN🟢`)), chalk.black(chalk.white(codigo)))
+            console.log(chalk.black(chalk.bgGreen(`🔮 CÓDIGO DE EMPAREJAMIENTO 🔮`)), chalk.black(chalk.white(codigo)))
         }, 3000)
 }}
 }
@@ -543,3 +543,5 @@ console.log(chalk.greenBright(`\n╭─────────◊ ARCHIVO ◊�
 _quickTest()
 .then()
 .catch(console.error)
+
+//AQUI PUEDES PONER UN CODIGO EJECUTADP DE AUTOBIO, SOLO TIENES QUE DEFINIR.
