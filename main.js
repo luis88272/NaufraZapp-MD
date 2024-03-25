@@ -151,8 +151,8 @@ console.log('⚠️ ERROR, SOLO SELECCIONA LA OPCION 1 O 2...\n')
 }} while (opcion !== '1' && opcion !== '2' || fs.existsSync(`./${authFile}/creds.json`))
 }
 
-console.info = () => {} //dejará de aparecer la molesta pre-key
-//console.warn = () => {}
+console.info = () => {} 
+console.warn = () => {}
 const connectionOptions = {
 logger: pino({ level: 'silent' }),
 printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
