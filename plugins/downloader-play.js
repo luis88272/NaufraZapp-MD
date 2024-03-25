@@ -16,20 +16,20 @@ const handler = async (m, {conn, command, args, text, usedPrefix}) => {
     const yt_play = await search(args.join(' '));
     let additionalText = '';
     if (command === 'play') {
-      additionalText = 'audio';
+      additionalText = 'audio 🔊';
     } else if (command === 'youtube') {
-      additionalText = 'video';
+      additionalText = 'video 📽';
     }
-    await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key } })
+    await conn.sendMessage(m.chat, { react: { text: '⏳️', key: m.key } })
     const texto1 = `♡₊˚ ₊✧♡₊˚ 📎・₊✧★🎸🎧°⋆♡₊˚ 🛰️
 > ⓘ 𝙏𝙄𝙏𝙐𝙇𝙊/𝙉𝙊𝙈𝘽𝙍𝙀:
- • ${yt_play[0].title}
+> • ${yt_play[0].title}
 > •┄┄┄┄┄┄┄┄┄┄┄┄•
 > ⓘ 𝙋𝙐𝘽𝙇𝙄𝘾𝘼𝘿𝙊 𝙀𝙉: 
- • ${yt_play[0].ago}
+> • ${yt_play[0].ago}
 > •┄┄┄┄┄┄┄┄┄┄┄┄•
 > ⓘ 𝙇𝙄𝙉𝙆/𝙀𝙉𝙇𝘼𝘾𝙀:
- • ${yt_play[0].url}
+> • ${yt_play[0].url}
 ♡₊˚ 🛰️₊✧♡₊˚ 📎・₊✧★🎸🎧°⋆♡₊˚ 📎
 01:06 ======⬤------------------------- ${secondString(yt_play[0].duration.seconds)}
                ⇆ㅤ ◁ㅤ❚❚ㅤ▷ㅤ ↻
